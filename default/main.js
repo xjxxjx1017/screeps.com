@@ -1,9 +1,10 @@
 var roleHarvester = require('role.harvester');
 var roleUpgrader = require('role.upgrader');
+var roleBuilder = require('role.builder');
 
 createRoles = function( role, count ){
     var tmp = _.filter(Game.creeps, (creep) => creep.memory.role == role);
-    console.log('001 create: ' + tmp.length);
+    console.log('001 check-create: ' + tmp.length);
 
     if(tmp.length < count) {
         var newName = 'role' + Game.time;
